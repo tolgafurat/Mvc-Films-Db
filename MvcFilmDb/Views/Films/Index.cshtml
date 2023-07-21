@@ -1,0 +1,66 @@
+﻿@model MvcFilmDb.Models.FilmTuruViewModel
+
+@{
+    ViewData["Title"] = "Film Listesi";
+}
+
+<h1>Filmler</h1>
+
+<p>
+    <a asp-action="Create">Yeni Ekle</a>
+</p>
+
+<form asp-controller="Films" asp-action="Index" method="get"> @*//arama eklendi. method=get diyerek yapılan aramanın url'e de yansıması sağlandı*@
+    <p>
+        
+        <select asp-for="filmTuru" asp-items="Model.turler">
+            <option value="">Tümü</option>
+        </select>
+
+        Başlık: <input type="text" asp-for="arama" />
+        <input type="submit" value="Ara" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.filmler[0].baslik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.filmler[0].cikisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.filmler[0].tur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.filmler[0].yonetmen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.filmler) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.baslik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cikisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tur)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.yonetmen)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Düzenle</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Detaylar</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

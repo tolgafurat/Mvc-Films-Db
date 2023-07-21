@@ -1,0 +1,45 @@
+﻿@model MvcFilmDb.Models.Film
+
+@{
+    ViewData["Title"] = "Ekle";
+}
+
+<h1>Ekle</h1>
+
+<h4>Film</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="baslik" class="control-label"></label>
+                <input asp-for="baslik" class="form-control" />
+                <span asp-validation-for="baslik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cikisTarihi" class="control-label"></label>
+                <input asp-for="cikisTarihi" class="form-control" />
+                <span asp-validation-for="cikisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tur" class="control-label"></label>
+                <input asp-for="tur" class="form-control" />
+                <span asp-validation-for="tur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="yonetmen" class="control-label"></label>
+                <input asp-for="yonetmen" class="form-control" />
+                <span asp-validation-for="yonetmen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Listeye Dön</a>
+</div>
+

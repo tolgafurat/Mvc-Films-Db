@@ -1,0 +1,42 @@
+﻿@model MvcFilmDb.Models.Film
+
+@{
+    ViewData["Title"] = "Detaylar";
+}
+
+<h1>Detaylar</h1>
+
+<div>
+    <h4>Film</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cikisTarihi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cikisTarihi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.yonetmen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.yonetmen)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Düzenle</a> |
+    <a asp-action="Index">Listeye Dön</a>
+</div>
