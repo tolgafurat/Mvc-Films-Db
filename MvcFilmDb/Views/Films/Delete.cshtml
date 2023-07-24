@@ -7,6 +7,7 @@
 <h1>Sil</h1>
 
 <h3>Bu filmi silmek istediğinize emin misiniz?</h3>
+<br />
 <div>
     <h4>Film</h4>
     <hr />
@@ -45,7 +46,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
-        <input type="submit" value="Sil" class="btn btn-danger" /> |
-        <a asp-action="Index">Listeye Dön</a>
+        <input type="submit" value="Sil" class="btn btn-danger" /> 
+        <a class="btn btn-link text-decoration-none" asp-action="Index">Listeye Dön</a>
     </form>
 </div>

@@ -15,37 +15,38 @@
             <input type="hidden" asp-for="id" />
             <div class="form-group">
                 <label asp-for="baslik" class="control-label"></label>
-                <input asp-for="baslik" class="form-control" />
+                <input asp-for="baslik" class="form-control mb-2" />
                 <span asp-validation-for="baslik" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="cikisTarihi" class="control-label"></label>
-                <input asp-for="cikisTarihi" class="form-control" />
+                <label asp-for="cikisTarihi" class="control-label mt-2"></label>
+                <input asp-for="cikisTarihi" class="form-control mb-2" />
                 <span asp-validation-for="cikisTarihi" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="tur" class="control-label"></label>
-                <input asp-for="tur" class="form-control" />
+                <label asp-for="tur" class="control-label mt-2"></label>
+                <input asp-for="tur" class="form-control mb-2" />
                 <span asp-validation-for="tur" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="yonetmen" class="control-label"></label>
-                <input asp-for="yonetmen" class="form-control" />
+                <label asp-for="yonetmen" class="control-label mt-2"></label>
+                <input asp-for="yonetmen" class="form-control mb-2" />
                 <span asp-validation-for="yonetmen" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="puan" class="control-label"></label>
+                <label asp-for="puan" class="control-label mt-2"></label>
                 <input asp-for="puan" class="form-control" />
                 <span asp-validation-for="puan" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Kaydet" class="btn btn-primary" />
+                <input type="submit" value="Kaydet" class="btn btn-primary mt-3" />
+                <a asp-action="Index" class="btn btn-link text-decoration-none mt-3">Listeye Dön</a>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Listeye Dön</a>
+    
 </div>
 

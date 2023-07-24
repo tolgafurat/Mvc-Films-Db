@@ -7,7 +7,7 @@
 <h1>Filmler</h1>
 
 <p>
-    <a asp-action="Create">Yeni Ekle</a>
+    <a asp-action="Create" class="btn btn-primary">Yeni Ekle</a>
 </p>
 
 <form asp-controller="Films" asp-action="Index" method="get"> @*//arama eklendi. method=get diyerek yapılan aramanın url'e de yansıması sağlandı*@
@@ -17,13 +17,13 @@
             <option value="">Tümü</option>
         </select>
 
-        Başlık: <input type="text" asp-for="arama" />
-        <input type="submit" value="Ara" />
+        Başlık: <input type="text" class="mr-3" asp-for="arama" />
+        <input type="submit" class="btn btn-dark" value="Ara" />
     </p>
 </form>
 
-<table class="table">
-    <thead>
+<table class="table table-bordered align-middle">
+    <thead class="text-center">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.filmler[0].baslik)
@@ -45,7 +45,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model.filmler) {
-        <tr>
+        <tr class="text-center">
             <td>
                 @Html.DisplayFor(modelItem => item.baslik)
             </td>
@@ -62,9 +62,9 @@
                 @Html.DisplayFor(modelItem => item.puan)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Düzenle</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Detaylar</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Sil</a>
+                <a asp-action="Edit" class="btn btn-warning mt-1 mb-1" asp-route-id="@item.id">Düzenle</a>
+                <a asp-action="Details" class="btn btn-info mt-1 mb-1" asp-route-id="@item.id">Detaylar</a> 
+                <a asp-action="Delete" class="btn btn-danger mt-1 mb-1" asp-route-id="@item.id">Sil</a>
             </td>
         </tr>
 }
