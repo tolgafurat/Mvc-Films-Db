@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcFilmDb.Data;
 
@@ -11,9 +12,10 @@ using MvcFilmDb.Data;
 namespace MvcFilmDb.Migrations
 {
     [DbContext(typeof(MvcFilmDbContext))]
-    partial class MvcFilmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230724131809_puanEklendi")]
+    partial class puanEklendi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -77,7 +77,7 @@ namespace MvcFilmDb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,baslik,cikisTarihi,tur,yonetmen")] Film film)
+        public async Task<IActionResult> Create([Bind("id,baslik,cikisTarihi,tur,yonetmen,puan")] Film film)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +109,7 @@ namespace MvcFilmDb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,baslik,cikisTarihi,tur,yonetmen")] Film film)
+        public async Task<IActionResult> Edit(int id, [Bind("id,baslik,cikisTarihi,tur,yonetmen,puan")] Film film)
         {
             if (id != film.id)
             {

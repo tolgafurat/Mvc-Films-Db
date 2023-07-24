@@ -37,6 +37,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.filmler[0].yonetmen)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.filmler[0].puan)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -54,6 +57,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.yonetmen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.puan)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Düzenle</a> |
